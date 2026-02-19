@@ -1,4 +1,4 @@
-package ca.bcit.comp2522.grocerystand;
+package ca.bcit.comp2522.itembasket;
 
 /**
  * JigsawPuzzle, child of Toy, is a jigsaw puzzle with a name, product id, price
@@ -19,20 +19,21 @@ public final class JigsawPuzzle extends Toy
     private final int totalNumPieces;
 
     /**
+     * Constructs a JigsawPuzzle that has a name, id, price, age range, and number of pieces.
      *
-     * @param productName    the name
-     * @param productId      the product ID
-     * @param priceCAD       the price in CAD
-     * @param ageRange       the age range (e.g. 12-99)
-     * @param totalNumPieces the number of pieces
+     * @param jigsawPuzzleName the name of this JigsawPuzzle
+     * @param jigsawPuzzleId   the product ID of this JigsawPuzzle
+     * @param priceCAD         the price in CAD of this JigsawPuzzle
+     * @param ageRange         the age range (e.g. 12-99) of this JigsawPuzzle
+     * @param totalNumPieces   the number of pieces of this JigsawPuzzle
      */
-    public JigsawPuzzle(final String productName,
-                        final int productId,
+    public JigsawPuzzle(final String jigsawPuzzleName,
+                        final int jigsawPuzzleId,
                         final double priceCAD,
                         final int[] ageRange,
                         final int totalNumPieces)
     {
-        super(productName, productId, priceCAD, ageRange);
+        super(jigsawPuzzleName, jigsawPuzzleId, priceCAD, ageRange);
 
         validateNumPieces(totalNumPieces);
         this.totalNumPieces = totalNumPieces;
@@ -46,19 +47,6 @@ public final class JigsawPuzzle extends Toy
     public int getNumPieces()
     {
         return totalNumPieces;
-    }
-
-    /**
-     * Validates the number of pieces in the puzzle.
-     *
-     * @param totalNumPieces the number of pieces in the puzzle to be validated
-     */
-    private static void validateNumPieces(final int totalNumPieces)
-    {
-        if (totalNumPieces < MIN_NUM_PUZZLE_PIECES)
-        {
-            throw new IllegalArgumentException("Invalid number of pieces: " + totalNumPieces);
-        }
     }
 
     /**
@@ -78,5 +66,18 @@ public final class JigsawPuzzle extends Toy
         builder.append("\n");
 
         return builder.toString();
+    }
+
+    /*
+     * Validates the number of pieces in the puzzle.
+     *
+     * @param totalNumPieces the number of pieces in the puzzle to be validated
+     */
+    private static void validateNumPieces(final int totalNumPieces)
+    {
+        if (totalNumPieces < MIN_NUM_PUZZLE_PIECES)
+        {
+            throw new IllegalArgumentException("Invalid number of pieces: " + totalNumPieces);
+        }
     }
 }

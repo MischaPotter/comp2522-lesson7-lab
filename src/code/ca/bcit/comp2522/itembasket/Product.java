@@ -1,4 +1,4 @@
-package ca.bcit.comp2522.grocerystand;
+package ca.bcit.comp2522.itembasket;
 
 /**
  * Models a Product, which has a name, id, and price in CAD.

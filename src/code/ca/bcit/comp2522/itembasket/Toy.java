@@ -1,4 +1,4 @@
-package ca.bcit.comp2522.grocerystand;
+package ca.bcit.comp2522.itembasket;
 
 import java.util.Arrays;
 
@@ -27,10 +27,10 @@ public abstract class Toy extends Product
      * @param priceCAD the price of this Toy
      * @param ageRange the age range for this Toy
      */
-    Toy(final String toyName,
-        final int toyId,
-        final double priceCAD,
-        final int[] ageRange)
+    public Toy(final String toyName,
+               final int toyId,
+               final double priceCAD,
+               final int[] ageRange)
     {
         super(toyName, toyId, priceCAD);
 
@@ -74,7 +74,7 @@ public abstract class Toy extends Product
 
         return builder.toString();
     }
-    
+
     /*
      * Validates the age range.
      *

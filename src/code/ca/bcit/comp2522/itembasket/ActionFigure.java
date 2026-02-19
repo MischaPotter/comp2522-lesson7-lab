@@ -1,4 +1,4 @@
-package ca.bcit.comp2522.grocerystand;
+package ca.bcit.comp2522.itembasket;
 
 /**
  * ActionFigure, child of Toy, is an action figure with a character name, product id, price in CAD, age range,
